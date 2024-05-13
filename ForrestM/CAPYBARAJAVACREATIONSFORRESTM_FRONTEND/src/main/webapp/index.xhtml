@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>ForrestM</title>
+	<link rel="stylesheet" type="text/css" href="Styles/Styles1.css" />
+</h:head>
+<h:body>
+	
+    <h:form>
+        <p:panel styleClass="panel-style">
+            
+            <h2 class="panel-title">ForrestM</h2>
+            <div class="panel-image">
+            
+            </div>
+            <p:button id="parametrosEmisoraBtn" value="Parámetros de Emisora" outcome="modulo1" styleClass="button-parametros" />
+            <p:button id="creacionPistasBtn" value="Creación de Pistas Musicales" outcome="modulo2" styleClass="button-creacion" />
+            <p:button id="programacionParrillaBtn" value="Programación de Parrilla del dia" outcome="modulo3" styleClass="button-programacion" />
+            <p:commandButton id="EjecucionBtn" action="#{modulo4Bean.redirigir}" value="Ejecucion de la parrilla de programacion" styleClass="button-play"></p:commandButton>
+        </p:panel>
+    </h:form>
+</h:body>
+</html>
+

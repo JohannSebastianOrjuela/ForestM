@@ -1,0 +1,50 @@
+	 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Creación de pistas musicales</title>
+       	<link rel="stylesheet" type="text/css" href="Styles/Styles6.css" />
+   
+</h:head>
+<h:body>
+    <h:form enctype="multipart/form-data">
+        <p:panel styleClass="panel-style">
+          <div class="panel-image"></div>
+			<br></br>
+			<br></br>
+
+            <h2>Creación de pistas musicales</h2>
+
+            <div>
+                <label for="nombreCancion">Nombre de la canción:</label>
+                <h:inputText id="nombreCancion" value="#{modulo2Bean.nombreCancion}" />
+            </div>
+            <div>
+                <label for="nombreArtista">Nombre del artista:</label>
+                <h:inputText id="nombreArtista" value="#{modulo2Bean.nombreArtista}" />
+            </div>
+                 <label for="nombreCancion">Genero Musical:</label>
+                <p:selectOneMenu value="#{modulo2Bean.generoMusical}">
+                <f:selectItem itemLabel="Rock" itemValue="Rock" />
+                <f:selectItem itemLabel="Regue" itemValue="Regue" />
+                <f:selectItem itemLabel="Regueton" itemValue="Regueton" />
+                <f:selectItem itemLabel="Boleros" itemValue="Boleros" />
+                <f:selectItem itemLabel="Vallenato" itemValue="Vallenato" />
+            	</p:selectOneMenu>
+            <div>
+                <label for="nombreMP3">Nombre MP3:</label>
+                <h:inputText id="nombewMp3" value="#{modulo2Bean.nombreArchivo}" />
+                
+            </div>
+             <p:commandButton value="Guardar" action="#{modulo2Bean.agregarPistaMusical}" />
+             <p:commandButton value="Eliminar" action="#{modulo2Bean.eliminarPistaMusical}" />
+             <p:button id="volver" value="Volver" outcome="index"/>
+            
+        </p:panel>
+    </h:form>
+</h:body>
+</html>
+

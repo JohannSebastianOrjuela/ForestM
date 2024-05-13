@@ -1,0 +1,55 @@
+@charset "UTF-8";
+        body {
+        	background-color:#0b1239;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #2179E0;
+            font-family: Arial, sans-serif;
+        }
+        .panel-style {
+            background-color: rgba(128, 128, 128, 0.6); 
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 50px auto;
+            width: 400px;
+            text-align: center;
+            color: #ffffff; 
+        }
+        .panel-image {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-image: url("https://imagizer.imageshack.com/img922/6979/4KUyVR.jpg");
+            background-size: cover;
+            background-position: center;
+            border: 2px solid #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .panel-title {
+            font-size: 24px;
+            margin-top: 60px;
+            color: #ffffff;
+        }
+        .button-parametros, .button-creacion, .button-programacion, .button-play {
+            background-color: #040404;
+            color: #040404;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button{
+                    background-color: #040404;
+        
+        }
+        .button-parametros:hover, .button-creacion:hover, .button-programacion:hover, .button-play:hover {
+            opacity: 0.8;
+        }

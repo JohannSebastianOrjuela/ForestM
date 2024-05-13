@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+ <h:head>
+   		 <title>Parametros de la emisora</title>
+   	
+    	<link rel="stylesheet" type="text/css" href="Styles/Styles2.css" />
+ </h:head>
+ <h:body>
+ <h:form id="myForm">
+        <p:panel styleClass="panel-style">
+                    <div class="panel-image"/>
+                	<br></br>
+        	<br></br>
+            <h2>Parametros de la emisora </h2>
+            <div>
+                <label for="nombreEmisora">Nombre de la emisora:</label>
+                <h:inputText id="nombreCancion" value="#{modulo1Bean.nombre_emisora}" />
+            </div>
+                <label for="nombreEmisora">Modo de Trasmision:</label>
+            
+            <p:selectOneMenu value="#{modulo1Bean.modo_transmision}" styleClass="dropdown-style">
+                <f:selectItem itemLabel="AM" itemValue="AM" />
+                <f:selectItem itemLabel="FM" itemValue="FM" /> 
+                <f:selectItem itemLabel="STREAMING" itemValue="STREAMING" />     
+                    
+            </p:selectOneMenu>
+            <div>
+                            <label for="Genero Musical">Genero Musical:</label>
+            
+            <p:selectOneMenu value="#{modulo1Bean.tipo_musica}" styleClass="dropdown-style">
+                <f:selectItem itemLabel="Rock" itemValue="Rock" />
+                <f:selectItem itemLabel="Regue" itemValue="Regue" />
+                <f:selectItem itemLabel="Regueton" itemValue="Regueton" />
+                <f:selectItem itemLabel="Boleros" itemValue="Boleros" />
+                <f:selectItem itemLabel="Vallenato" itemValue="Vallenato" />
+            </p:selectOneMenu>        
+            </div>
+            <p:commandButton value="Crear" action="#{modulo1Bean.agregarEmisora}"  />
+    		<p:commandButton value="Modificar" action="#{modulo1Bean.agregarEmisora}" />
+            <p:button id="volver" value="Volver" outcome="index"/>
+            
+        </p:panel>
+ </h:form>
+ </h:body>
+ </html>

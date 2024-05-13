@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Programación de Parrilla del dia</title>
+        	<link rel="stylesheet" type="text/css" href="Styles/Styles3.css" />
+
+</h:head>
+<h:body>
+    <h:form>
+        <p:panel styleClass="panel-style">
+         <div class="panel-image"/>
+        	<br></br>	
+        	<div></div>
+            <h2 class="panel-title">Programación de Parrilla del dia</h2>
+             <p:selectCheckboxMenu id="menu" value="#{modulo3Bean.listaSeleccionada}" label="Pistas Musicales" multiple="true" filter="true" filterMatchMode="contains" panelStyle="width:500px">
+        		<f:selectItems value="#{modulo3Bean.lista}" var="pista" itemLabel="#{pista.nombreArchivo}" itemValue="#{pista.nombreArchivo}" />
+    		</p:selectCheckboxMenu><br></br>
+    		<!-- <p:pickList id="pickList" value="#{pickListView.cities}" var="cities" itemLabel="#{cities}" itemValue="#{cities}" />-->
+    		
+    		
+    		<br></br> <h:outputLabel id="label_Fecha" value="Fecha (YYYY-MM-DD):" for="fecha" style="color: #ffffff;"/>
+    <h:inputText id="fecha" value="#{modulo3Bean.fecha}" required="true" />
+    <br></br><br></br>
+    <p:commandButton value="Guardar Programación del Día" action="#{modulo3Bean.guardarProgramacionDelDia}" />
+    <p:commandButton value="eliminar Programación del Día" action="#{modulo3Bean.eliminarProgramacion}" />
+    
+    <p:button id="volver" value="Volver" outcome="index" />   
+    </p:panel>
+    </h:form>
+</h:body>
+</html>

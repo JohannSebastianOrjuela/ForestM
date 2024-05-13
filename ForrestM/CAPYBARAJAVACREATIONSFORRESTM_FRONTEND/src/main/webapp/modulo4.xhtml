@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Ejecucion de la parrilla de programacion</title>
+        	<link rel="stylesheet" type="text/css" href="Styles/Styles5.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+</h:head>
+<h:body>
+
+    <h:form>
+        <p:panel styleClass="panel-style">
+          	<div class="panel-image"/>
+        	<br></br>	
+        	<br></br>	
+            <h2 class="panel-title">Ejecucion de la parrilla de programacion</h2>
+                            <label for="a">Parrillas:</label>
+            
+            <p:selectOneMenu value="#{modulo4Bean.fechaSeleccionada}" >
+                <f:selectItems value="#{modulo4Bean.programaciones}" var="programacion" itemValue="#{programacion.fecha}" itemLabel="#{programacion.fecha}" />
+            </p:selectOneMenu><br></br>
+            <p:commandButton  action="#{modulo4Bean.anterior}"  icon="fa fa-step-backward"/>        
+            <p:commandButton action="#{modulo4Bean.reproducirProgramacion(modulo4Bean.fechaSeleccionada)}" icon="fa fa-play" />
+            <p:commandButton  action="#{modulo4Bean.detener}" icon="fa fa-pause" />    
+            <p:commandButton  action="#{modulo4Bean.siguiente}" icon="fa fa-step-forward"/>
+            <br></br>
+            <p:button id="volver" value="Volver" outcome="index" />
+
+        </p:panel>
+    </h:form>
+</h:body>
+</html>
